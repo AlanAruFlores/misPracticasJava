@@ -47,4 +47,14 @@ public class Televisor extends Electrodomestico {
         return precio;
     }
     
+    @Override 
+    public void mostrarPrecioFinal(){
+        System.out.println(this);
+        System.out.println("EL PRECIO FINAL ES: "+calcularPrecioFinal());
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() +" | RESOLUCION: "+this.resolucion+" | SINTETIZADOR: "+this.tieneSintonizador+" | TELEVISOR";
+    }
 }

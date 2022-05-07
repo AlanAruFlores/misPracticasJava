@@ -9,7 +9,7 @@ package pooElectrodomesticos;
  *
  * @author alang
  */
-public class Electrodomestico {
+public abstract class Electrodomestico {
     private double precioBase;
     private int pesoKg;
     private Letra letra;
@@ -64,5 +64,12 @@ public class Electrodomestico {
     }
     public double getPrecio(){
         return this.precioBase;
+    }
+    
+    public abstract void mostrarPrecioFinal();
+    
+    @Override
+    public String toString(){
+        return "PRECIO BASE: "+this.precioBase+" | PESO KG: "+this.pesoKg+" | Color: "+this.color+" | Letra: "+this.letra;
     }
 }
